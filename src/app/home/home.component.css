@@ -1,0 +1,57 @@
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+
+.main-div * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-card {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+mat-form-field.mat-form-field {
+  font-size: 20px;
+  color: white;
+}
+
+.card2 {
+  background: #4154B2;
+}
+
+.mat-card:not([class*=mat-elevation-z]) {
+  box-shadow: none;
+}
+
+.paragraph {
+  color: #4154B2;
+  text-align: center;
+}
+
+#left {
+  color: #4154B2;
+}
+
+h1 {
+  color: #B29E41;
+}
+
+h3 {
+  color: #929DD3;
+}
+
+.avatar {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+#wrapper {
+  text-align: center;
+}
+
+#left #right {
+  display: inline-block;
+}

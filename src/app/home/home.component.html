@@ -1,0 +1,63 @@
+<div>
+  <mat-card class="example-card">
+    <mat-card-content class="main-div">
+      <span>
+      <p>
+        <img class="avatar" src="../../assets/nickEm.png">
+        <!-- <div class="company-header-avatar" style="background-image: url(../../assets/nickEm.png)"></div> -->
+        </p>
+        <p>
+          <img class="avatar" src="../../assets/nickEmFlag.png" alt="Photo of a Shiba Inu">
+        </p>
+        <p>
+          <img class="avatar" src="../../assets/poser.png" alt="Photo of a Shiba Inu">
+        </p>
+        </span>
+        <h3 class="paragraph">
+          Hi I'm Nick. I live in Kaysville, Utah with my wife Emilie. <br> I am passionate about learning new things and entrepreneurship. <br> Always looking to partner with big dreamers and smart people.
+        </h3>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="card2">
+    <mat-card-content class="main-div">
+      <h1>Join my newsletter!</h1>
+      <h3>Get weekly updates on startups, tech and more.</h3>
+    </mat-card-content>
+    <mat-card-content *ngIf="successMessage" class="main-div">
+      <h1>Thank you for opting in to Nick's emails!</h1>
+    </mat-card-content>
+    <mat-card-content *ngIf="!successMessage" class="main-div">
+
+        <p >
+          <mat-form-field>
+            <mat-label>Name&nbsp;<i class="material-icons">
+  create
+  </i></mat-label>
+            <input [(ngModel)]="infoForm.name" matInput placeholder="Michael G. Scott">
+            <mat-hint *ngIf="!namePass">Please enter a valid name</mat-hint>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field>
+            <mat-label>Email&nbsp;<i class="material-icons">
+  email
+  </i></mat-label>
+            <input [(ngModel)]="infoForm.email" matInput placeholder="mscott@dundermifflin.com">
+            <mat-hint *ngIf="!emailPass">Please enter a valid email</mat-hint>
+            <mat-hint *ngIf="successMessage">Thank you for opting in to Nick's emails!</mat-hint>
+          </mat-form-field>
+        </p>
+        <p>
+          <button mat-raised-button (click)="handleForm()">Submit</button>
+        </p>
+
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-content id="wrapper">
+      <h3 id="left">Love Start-Ups? Catch me on YouTube</h3>
+      <span class="example-spacer"></span>
+      <iframe id="right" width="560" height="315" [src]="safeURL | youtube" frameborder="0" allowfullscreen></iframe>
+    </mat-card-content>
+  </mat-card>
+</div>
